@@ -1,5 +1,5 @@
 {% set name = "Benchmark-4dn" %}
-{% set version = "0.5.7" %}
+{% set version = "0.5.11" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 43014d8a27ba67e0eee20835f326785e166d120ca8280f9626715a86220a97f8
+  sha256: 7bbce25010d0aadaeea79efb938accd3d817ef312404f50afaafb81cd13360ca
 
 build:
   number: 0

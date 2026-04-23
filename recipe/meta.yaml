@@ -1,17 +1,17 @@
 {% set name = "Benchmark-4dn" %}
-{% set version = "0.5.12" %}
+{% set version = "0.5.15" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 972a06cae3e8d2a62d5629553dbfd385a54e54d9b99b1702f6fd5c02128007ba
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 941ca3893cacf6ed96e9f10ceeec3477455acabc07c4cdcaf453b51ad9c51ca8
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
@@ -26,12 +26,12 @@ test:
     - Benchmark
 
 about:
-  home: "https://github.com/SooLee/Benchmark/"
-  license: "MIT"
-  license_family: "MIT"
-  license_file: "LICENSE.txt"
-  summary: "Benchmark functions that returns total space, mem, cpu given input size and parameters for the CWL workflows"
-  doc_url: "https://github.com/SooLee/Benchmark"
+  home: https://github.com/SooLee/Benchmark/
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE.txt
+  summary: Benchmark functions that returns total space, mem, cpu given input size and parameters for the CWL workflows
+  doc_url: https://github.com/SooLee/Benchmark
 
 extra:
   recipe-maintainers:
